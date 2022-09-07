@@ -59,9 +59,10 @@ public class n11Task extends TestBaseRapor {
         extentTest.info("Kullanici telefon kelimesini aratti");
 
         // Passes to second page
-        waitForVisibility(n11.ikinciSayfaButonu, 10);
+
         waitFor(5);
-        jsClick(n11.ikinciSayfaButonu);
+        //jsClick(n11.ikinciSayfaButonu);
+        n11.ikinciSayfaButonu.click();
         extentTest.info("Kullanici 2.sayfaya gecti");
 
         // Verifies that second page is opened
@@ -78,22 +79,14 @@ public class n11Task extends TestBaseRapor {
         waitFor(3);
         List<WebElement> telefonListesi =
                 Driver.getDriver().findElements(By.xpath("//a[@class='plink']"));
-        System.out.println("telefonListesi.size() = " + telefonListesi.size());
         int randomUrunNumarasi = num.nextInt(telefonListesi.size()) + 1;
 
-        System.out.println("randomUrunNumarasi = " + randomUrunNumarasi);
-        WebElement secilecekUrun =
-                Driver.getDriver().
-                        findElement(By.xpath("(//a[@class='plink'])[" + randomUrunNumarasi + "]"));
+        String secilenUrun = n11.secilenUrunIsmi(randomUrunNumarasi);
+        // Burada secilen urunun ismini urun sepete gitmeden aldik
 
-        WebElement secilenUrunLocator =
-                Driver.getDriver().
-                        findElement(By.xpath("(//h3[@class='productName'])[" + randomUrunNumarasi + "]"));
-        System.out.println("secilenUrunLocator = " + secilenUrunLocator.getText());
-        String secilenUrun = secilenUrunLocator.getText(); // Burada secilen urunun ismini urun sepete gitmeden aldik
+        n11.secilenUrun(randomUrunNumarasi).click(); // urunu secer
 
 
-        secilecekUrun.click();// urunu secer
         waitFor(5);
         n11.sepeteEkleButonu.click(); // sepete ekle butonuna tiklar
         extentTest.info("Kullanici 2.sayfadan rastgele bir urun secti");
@@ -103,7 +96,7 @@ public class n11Task extends TestBaseRapor {
         String sepettekiUrun = n11.sepettekiUrun.getText();
         softAssert.assertEquals(sepettekiUrun, secilenUrun);
         // Daha once aldigimiz urun ismini, sepetteki urun ismi ile karsilastirdik
-        extentTest.info("Kullanici sepete eklenen dogru oldugunu dogruladi.");
+        extentTest.info("Kullanici sepete eklenen urunun dogru oldugunu dogruladi.");
 
         // Deletes the product from basket
         waitFor(3);

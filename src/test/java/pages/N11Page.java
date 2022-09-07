@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -62,6 +63,20 @@ public class N11Page {
     @FindBy(xpath = "//span[@id='deleteBtnDFLB']")
     public WebElement popUpUrunSilButonu;
 
-    @FindBy(xpath ="//*[text()='Sepetin Boş Görünüyor']")
+    @FindBy(xpath = "//*[text()='Sepetin Boş Görünüyor']")
     public WebElement sepetinBosGorunuyorYazisi;
+
+    public WebElement secilenUrun(int index) {
+        WebElement secilecekUrun;
+        return secilecekUrun =
+                Driver.getDriver().
+                        findElement(By.xpath("(//a[@class='plink'])[" + index + "]"));
+    }
+
+    public String secilenUrunIsmi(int index) {
+        String secilenUrunLocator;
+        return secilenUrunLocator = Driver.getDriver().
+                findElement(By.xpath("(//h3[@class='productName'])[" + index + "]")).getText();
+    }
+
 }

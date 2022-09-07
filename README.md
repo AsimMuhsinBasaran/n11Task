@@ -10,7 +10,8 @@
 * Kullanilan build tool **Maven**
 
 ## **Rapor**
-http://localhost:63342/n11Task/target/Report/report2022.09.07__10.00.45.html?_ijt=krq742rqqp59eumq7tm4aa2gco&_ij_reload=RELOAD_ON_SAVE
+![rapor](https://user-images.githubusercontent.com/101674637/188957851-d5acba1b-de7a-4def-9151-cc3990a51e71.png)
+
 
 ## Ayni kodlar firefox ile calisirken, farkli bir browser ile calistirilip kullanici adi ve sifre ile giris yap tusuna basildiginda test pass olsa dahi, Web sayfasinda kullanici girisi ekraninda kaliyor ve devam etmiyor. Asagida buna ait bir video bulabilirsiniz
 		

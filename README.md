@@ -1,9 +1,9 @@
 # n11.com UI Test
 - Yapilan testler;
-1 - Login Fonksiyonu
-2 - Sepete Urun Ekleme
-3 - Sepette Urun Goruntuleme
-4 - Sepetten Urun Silme
+1. Login Fonksiyonu
+2. Sepete Urun Ekleme
+3. Sepette Urun Goruntuleme
+4. Sepetten Urun Silme
 
 * Kullanilan programlama dili JAVA
 * Kullanilan framework TestNG

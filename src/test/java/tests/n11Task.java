@@ -107,5 +107,7 @@ public class n11Task extends TestBaseRapor {
         //Validates that product is deleted
         softAssert.assertTrue(n11.sepetinBosGorunuyorYazisi.getText().contains("Sepetin Boş Görünüyor"));
         extentTest.info("Kullanici sepetin bos oldugunu dogruladi.");
+
+        softAssert.assertAll();
     }
 }

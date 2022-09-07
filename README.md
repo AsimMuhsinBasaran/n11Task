@@ -17,5 +17,3 @@
 		
 https://user-images.githubusercontent.com/101674637/188943807-af5ba0f4-4dfc-40f9-b70c-74678ba770e1.mp4
 
-#**Rapor**#
-http://localhost:63342/n11Task/target/Report/report2022.09.07__10.00.45.html?_ijt=krq742rqqp59eumq7tm4aa2gco&_ij_reload=RELOAD_ON_SAVE
